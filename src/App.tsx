@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import img from "./assests/powered.png"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Cont>
+      <header>
+        <div>
+          <img src={img} alt="logo" width={150} />
+        </div>
       </header>
-    </div>
+      <ContMain>
+        <div className='leftSide'>
+          ...
+        </div>
+        <div className='rigthSide'>
+          ...
+        </div>
+
+      </ContMain>
+    </Cont>
   );
 }
 
 export default App;
+
+const Cont = styled.div`
+  header{
+    max-width:900px;
+    margin:40px auto;
+  }
+
+`
+
+const ContMain = styled.div`
+    display:flex;
+    max-width:900px;
+    margin:auto;
+    
+
+    .leftSide{
+      flex:1;
+      margin-right:40px;
+    }
+    .rigthSide{
+      flex:1;
+      margin-left:40px;
+    }
+
+`
